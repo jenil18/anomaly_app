@@ -25,7 +25,7 @@ if uploaded_file is not None:
     
     prediction = predict(image)
     # st.write(prediction)
-    confidence = prediction['sequential_3'].numpy()[0]
+    confidence = prediction.numpy()[0]
     
     class_names = ["Normal", "Defective"]  # Match classes in Teachable Machine
     predicted_class = class_names[np.argmax(confidence)]
