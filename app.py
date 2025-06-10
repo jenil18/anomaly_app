@@ -2,10 +2,9 @@ import streamlit as st
 import tensorflow as tf
 import numpy as np
 from PIL import Image
-import keras
 
 # Load the trained model
-model = keras.layers.TFSMLayer("model/", call_endpoint="serving_default")
+model = tf.keras.models.load_model("model/")
 
 # Function to preprocess and predict
 def predict(image):
